@@ -1,18 +1,19 @@
 {% extends "global/base.html" %}
 {% block main %}
+{% load static %}
     <section id="carousel" class="carousel slide" data-bs-ride="carousel">
         <article class="carousel-inner">
           <figure class="carousel-item active" data-bs-interval="2000">
-            <img src="image/japao.jpg" class="d-block w-100" alt="..." height="600">
+            <img src="{% static 'global/image/japao.jpg' %}" class="d-block w-100" alt="..." height="600">
           </figure>
           <figure class="carousel-item" data-bs-interval="2000">
-            <img src="image/manaus.jpg" class="d-block w-100" alt="..." height="600">
+            <img src="{% static 'global/image/manaus.jpg' %}" class="d-block w-100" alt="..." height="600">
           </figure>
           <figure class="carousel-item" data-bs-interval="2000">
-            <img src="image/paraiba.jpg" class="d-block w-100" alt="..." height="600">
+            <img src="{% static 'global/image/paraiba.jpg' %}" class="d-block w-100" alt="..." height="600">
           </figure>
           <figure class="carousel-item" data-bs-interval="2000">
-            <img src="image/sanandreas.jpg" class="d-block w-100" alt="..." height="600">
+            <img src="{% static 'global/image/sanandreas.jpg' %}" class="d-block w-100" alt="..." height="600">
           </figure>
         </article>
         <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">

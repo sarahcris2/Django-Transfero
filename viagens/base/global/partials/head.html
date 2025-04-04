@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
+{% load static %}
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,11 +9,15 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- bootstrap icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <!-- css -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/carrossel.css">
-    <title>Jornada Viagem | Home</title>
-    <link rel="icon" type="image/x-icon" href="/image/airplane.png">
+    <!-- css usando pastas-->
+    <!-- <link rel="stylesheet" href="/static/global/css/style.css">
+    <link rel="stylesheet" href="/static/global/css/carrossel.css"> -->
+    
+    <!-- css usando biblioteca-->
+    <link rel="stylesheet" href="{% static 'global/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'global/css/carrossel.css' %}">
+    <title>{{titulo}}</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'global/image/airplane.png' %}">
 </head>
 
 <body>

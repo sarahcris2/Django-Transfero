@@ -1,3 +1,5 @@
+{% load static %}
+
 <footer> <!-- rodapé da página-->
     <div class="footer-copy">
         <p>&copy; 2025 Jornada de Viagens. <br>Todos os direitos reservados. ✈🌎</p>
@@ -8,8 +10,8 @@
         <p>Telefone: (21)99999-9999</p>
     </div>
     <div class="footer-social">
-        <a href="#" target="_blank"><img src="image/facebook.png" width="20"></a>
-        <a href="#" target="_blank"><img src="image/instagram.png" width="20"></a>
-        <a href="#" target="_blank"><img src="image/whatsapp.png" width="20"></a>
+        <a href="#" target="_blank"><img src="{%static 'global/image/facebook.png' %}" width="20"></a>
+        <a href="#" target="_blank"><img src="{%static 'global/image/instagram.png' %}" width="20"></a>
+        <a href="#" target="_blank"><img src="{%static 'global/image/whatsapp.png' %}" width="20"></a>
     </div>
 </footer>
