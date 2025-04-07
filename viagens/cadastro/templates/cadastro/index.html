@@ -2,7 +2,8 @@
 {% block main %}
     <main>
     <section class="container mt-5 mb-5">
-        <form name="teste" method="post" action="aula.js">
+        <form name="teste" method="post" action="{% url 'gravar' %}">
+            {% csrf_token %}
             <label for="nome" class="form-label">Nome</label>
             <input type="text" name="nome" id="nome" class="form-control" required>
             <label for="movel" class="form-label">Telefone</label>
@@ -10,12 +11,27 @@
             <label for="correio" class="form-label">Email</label>
             <input type="email" name="correio" id="correio" class="form-control" required>
             <hr>
-            <input type="button" class="btn btn-outline-secondary" value="Confirmar" onclick="exibirDados()">  
+            <input type="submit" class="btn btn-outline-success" value="Enviar"> 
             <input type="reset"  class="btn btn-outline-danger" value="Limpar">
-            <input type="submit" class="btn btn-outline-success" value="Enviar">   
-           
+            <input type="button" class="btn btn-outline-secondary" value="Mostrar todos">
             
         </form>
+        <table class="table table-striped">
+            <tr>
+                <td>id</td>
+                <td>nome</td>
+                <td>telefone</td>
+                <td>pessoa</td>
+            </tr>
+            {% for pessoa in pessoas %}
+           <tr>  
+            <td>{{ pessoa.id_pessoa}}</td>
+            <td>{{ pessoa.nome}}</td>
+            <td>{{ pessoa.telefone}}</td>
+            <td>{{ pessoa.email}}</td>
+        </tr>
+        {% endfor %}
+    <table/>
     </section>
    </main>
 {% endblock main %}
